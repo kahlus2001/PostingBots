@@ -2,9 +2,14 @@
 
 Developed by: Mikołaj Kahl 2022
 
+
+github URL: https://github.com/kahlus2001/PostingBots
+
 ### This is a hobbyist project with the following goals:
-- Show knowledge of how to build and design python projects using best practices
-- Practice using 3rd party APIs
+- Show knowledge of how to build and design python projects using best practices.
+- Practice using 3rd party APIs.
+- Demonstrate knowledge of Git and use of remote repositories.
+- Learn how to deploy python projects using Docker.
 
 ### Several Stages are planned for this project:
 - [EASY] Build a bot that automatically tweets a random motivational quote fetched from the quotesAPI on a randomly selected backround image from another open-source API (TBD). The bot will run continuously and tweet a few times per day.
