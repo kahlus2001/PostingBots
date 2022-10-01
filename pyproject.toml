@@ -1,0 +1,18 @@
+[project]
+name = "PostingBots"
+version = "0.0.1"
+authors = [
+  { name="Mikolaj Kahl", email="mikolaj.kahl@gmail.com" },
+]
+description = "A private project with bots that fetch data from the Internet and post content on twitter. "
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/kahlus2001/PostingBots"
+"Bug Tracker" = "https://github.com/kahlus2001/PostingBots/issues"
