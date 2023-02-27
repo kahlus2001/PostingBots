@@ -1,10 +1,9 @@
-import requests
 import tweepy
 import json
 import os
 import logging
 
-from src.make_content import make_post_content
+from src.TwitterAutomationSolutions.make_content import make_post_content
 
 logger = logging.getLogger()
 
@@ -48,12 +47,12 @@ def make_bot_connection():
     return api
 
 
-def tweet(api):
+def tweet(twitter_api):
     """ Tweet content on Twitter.
 
     Parameters
     ----------
-    api : tweepy.api.API
+    twitter_api : tweepy.api.API
         The tweepy Twitter API object
 
     Raises
@@ -61,13 +60,14 @@ def tweet(api):
     Exception as e
         If could not tweet.
     """
+
     image_path = make_post_content()
-    media = api.media.upload(image_path)
+    print(image_path)
+    tweet_text = " Quote for Today:"
     try:
-        post_result = api.update_status(status=tweet, media_ids=[media.media_id])
+        media = twitter_api.media.upload(image_path)
+        post_result = twitter_api.update_status(status=tweet_text, media_ids=[media.media_id])
         logging.info("Tweeted successfully!")
     except Exception as e:
         logging.error("Could not tweet.")
         raise e
-
-tweet(api=make_bot_connection())

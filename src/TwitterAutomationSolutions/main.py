@@ -1,7 +1,4 @@
-import time
-
-from src.make_content import make_post_content
-from src.twitter_bot import make_bot_connection, tweet
+from src.TwitterAutomationSolutions.twitter_bot import make_bot_connection, tweet
 
 
 def run():
@@ -12,6 +9,7 @@ def run():
     tweet(api)
 
     # while True:
+
     #     tweet(api)
     #     time.sleep(posting_frequency)
 
